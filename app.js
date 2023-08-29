@@ -48,7 +48,7 @@ app.post("/players/", async (req, resp) => {
   VALUES ('${playerName}','${jerseyNumber}','${role}');`;
   const dbresp = await db.run(addplayer);
   const playerId = dbresp.lastID;
-  resp.send("Player Added to The Team");
+  resp.send("Player Added to Team");
 });
 
 app.get("/players/:playerId/", async (req, resp) => {
